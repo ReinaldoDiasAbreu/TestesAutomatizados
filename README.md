@@ -42,4 +42,8 @@ Tendo isso, já podemos trabalhar com o Tester, executando-o da seguinte maneira
   - n     -> Número de arquivos de teste de 0 a n.
   - d     -> Caso passado, ele removerá os arquivos .res de saída do programa usados para comparacão.
   
+O Tester apresenta como saída os seguintes status:
   
+  - PASSED -> Seu programa executou corretamente e exibiu a saída esperada.
+  - EXECUTION ERROR -> Seu programa teve um erro de execução com a entrada ( podem aparecer erros exibidos pelo sistema relacionados ao problema.
+  - NOT IDENTICAL -> Seu programa executou corretamente mas exibiu uma saida diferente a esperada.
