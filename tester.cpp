@@ -13,7 +13,7 @@ void help()
     cout << "           ./tester exec pasta N D" << endl << endl;
     cout << "               exec -> Arquivo executavel." << endl;
     cout << "               pasta -> Diretorio de arquivos de entrada e saida (.res, .sol)." << endl;
-    cout << "               N -> Numero de testes de 0 a N." << endl;
+    cout << "               N -> Numero de testes." << endl;
     cout << "               D -> Remove arquivos de resposta se True." << endl;
     cout << endl << "   Os arquivos de entrada e saida devem esta nomedados da seguinte maneira:" << endl;
     cout << "           0.in   -   0.sol" << endl;
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
             string exec = string(argv[1]);
             string pasta = string(argv[2]);
 
-            for(int i = 0; i <= atoi(argv[3]); i++)
+            for(int i = 0; i < atoi(argv[3]); i++)
             {
                 string ind = to_string(i);
                 string cexec = "./" + exec +  " < " + pasta + "/" + ind + ".in" + " > " + pasta + "/" + ind + ".res" ;
