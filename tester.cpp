@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/*
+	Programa de Automatização de Testes
+*/
+
 void help()
 {
     cout << endl << "                       TESTES AUTOMATICOS" << endl << endl;
