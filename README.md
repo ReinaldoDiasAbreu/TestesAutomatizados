@@ -1,5 +1,5 @@
 # Tester
-Simples programa de teste que realiza comparação automática dos arquivos de entrada e saída do seu programa.
+Simples programa de teste que automatiza a comparação dos arquivos de entrada e saída do seu programa.
 
 ## Sobre o Tester
 O Tester é um programa desenvolvido em C++ que automatiza a comparação entre os arquivos de entrada do seu sistema com as saídas esperadas. Ótimo para automatizar testes para sistemas simples.
