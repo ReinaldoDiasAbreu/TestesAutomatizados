@@ -1,4 +1,4 @@
-# TestesAutomatizados
+# Tester
 Simples programa de teste que realiza comparação automática dos arquivos de entrada e saída do seu programa.
 
 ## Sobre o Tester
@@ -31,7 +31,7 @@ Você pode organizar seus arquivos de teste em uma única pasta, e os mesmos dev
   - ~ 1.in
   - ~ 1.sol
 
-Sendo os arquivos de entrada finalizados com .in e os de resposta com .sol, todos enumerados em sequência conforme exemplo.
+Sendo os arquivos de entrada finalizados com .in e os de resposta com .sol, todos nomeados com números em sequência conforme exemplo.
 
 Tendo isso, já podemos trabalhar com o Tester, executando-o da seguinte maneira:
 ```
@@ -40,10 +40,10 @@ Tendo isso, já podemos trabalhar com o Tester, executando-o da seguinte maneira
   - exec  -> Arquivo executável.
   - pasta -> Nome do diretório de testes.
   - n     -> Número de arquivos de teste.
-  - d     -> Caso passado, ele removerá os arquivos .res de saída do programa usados para comparacão.
+  - d     -> Caso passado, ele removerá os arquivos .res de saída do programa usados para comparação.
   
 O Tester apresenta como saída os seguintes status:
   
   - PASSED -> Seu programa executou corretamente e exibiu a saída esperada.
-  - EXECUTION ERROR -> Seu programa teve um erro de execução com a entrada ( podem aparecer erros exibidos pelo sistema relacionados ao problema.
-  - NOT IDENTICAL -> Seu programa executou corretamente mas exibiu uma saida diferente a esperada.
+  - EXECUTION ERROR -> Seu programa teve um erro de execução com a entrada ( podem aparecer erros exibidos pelo sistema relacionados ao problema).
+  - NOT IDENTICAL -> Seu programa executou corretamente mas exibiu uma saída diferente da esperada.
