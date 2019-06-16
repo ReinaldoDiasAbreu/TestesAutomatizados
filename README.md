@@ -39,7 +39,7 @@ Tendo isso, já podemos trabalhar com o Tester, executando-o da seguinte maneira
 ```
   - exec  -> Arquivo executável.
   - pasta -> Nome do diretório de testes.
-  - n     -> Número de arquivos de teste de 0 a n.
+  - n     -> Número de arquivos de teste.
   - d     -> Caso passado, ele removerá os arquivos .res de saída do programa usados para comparacão.
   
 O Tester apresenta como saída os seguintes status:
