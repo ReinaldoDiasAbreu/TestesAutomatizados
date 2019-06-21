@@ -11,19 +11,21 @@ using namespace std;
 
 void help()
 {
-    cout << endl << "                       TESTES AUTOMATICOS" << endl << endl;
-    cout << "   Executa comparacoes entre as entradas e saidas especificadas." << endl << endl;
+    cout << endl << "                           TESTER" << endl << endl;
+    cout << "   Executa comparaçoes entre as entradas e saídas especificadas." << endl << endl;
     cout << "   Comando: " << endl << endl;
-    cout << "           ./tester exec pasta N D" << endl << endl;
-    cout << "               exec -> Arquivo executavel." << endl;
-    cout << "               pasta -> Diretorio de arquivos de entrada e saida (.res, .sol)." << endl;
-    cout << "               N -> Numero de testes." << endl;
-    cout << "               D -> Remove arquivos de resposta se True." << endl;
-    cout << endl << "   Os arquivos de entrada e saida devem esta nomedados da seguinte maneira:" << endl;
+    cout << "           ./tester exec dir N D" << endl << endl;
+    cout << "               exec -> Arquivo executável." << endl;
+    cout << "               dir -> Diretório de arquivos de entrada e saída (.in, .sol)." << endl;
+    cout << "               N -> Quantidade de testes." << endl;
+    cout << "               D -> Remove arquivos de resposta se 1 (.res)." << endl;
+    cout << endl << "   Os arquivos de entrada e saída devem ser nomedados da seguinte maneira:" << endl << endl;
     cout << "           0.in   -   0.sol" << endl;
     cout << "           1.in   -   1.sol" << endl;
-    cout <<  endl << "  Todos os arquivos devem esta no mesmo diretorio (pasta) e numerados em sequencia de execucao" << endl << endl;
-
+    cout <<  endl << "  Todos os arquivos devem ficar no mesmo diretorio (dir) e numerados" << endl;
+    cout << "  em sequência de execuçao (De 0 a N-1)." << endl;
+    cout << "  O executavel deve ficar no mesmo diretório do tester." << endl << endl;
+    cout << "  Exemplo:  ./tester myprogram testes 5 1" << endl << endl;
 }
 
 int main(int argc, char *argv[])
@@ -39,8 +41,8 @@ int main(int argc, char *argv[])
         }
         else
         {
-            cout << "           Testes Automaticos" << endl;
-            cout << "Exec: " << argv[1] << "  -> Pasta: /" << argv[2] << "   -> Quantidade: " << argv[3] << endl << endl;
+            cout << "                   TESTER" << endl;
+            cout << "Exec: " << argv[1] << "  -> Pasta: /" << argv[2] << "   -> Quant: " << argv[3] << endl << endl;
 
             string exec = string(argv[1]);
             string pasta = string(argv[2]);
@@ -54,11 +56,11 @@ int main(int argc, char *argv[])
                 if(system(cexec.c_str()) == 0)
                 {
                     if(system(ccomp.c_str()) == 0)
-                        cout << "TEST " << i << "->    PASSED" << endl;
+                        cout << "TEST " << i << " ->    PASSED" << endl;
                     else
-                        cout << "TEST " << i << "->    NOT IDENTICAL" << endl;
+                        cout << "TEST " << i << " ->    NOT IDENTICAL" << endl;
                 } 
-                else cout << "TEST " << i  << "->    EXECUTION ERROR" << endl;
+                else cout << "TEST " << i  << " ->    EXECUTION ERROR" << endl;
                
             }
             string clean = "rm " +  pasta + "/*.res";
